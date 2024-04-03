@@ -1,0 +1,176 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+}
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+input, button, textarea, select {
+    font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+    .attribution a { 
+        color: hsl(228, 45%, 44%); 
+    }
+
+/*google font*/
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+
+
+
+/*Vars*/
+:root {
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+    --darkBlue: hsl(234, 12%, 34%);
+    --grayBlue: hsl(229, 6%, 66%);
+    --lightGray: hsl(0, 0%, 98%);
+    --white: hsl(0,100%,100%);
+}
+
+
+
+/*main styling*/
+body {
+    font-size: 15px;
+    min-height: 100vh;
+    background-color: var(--lightGray);
+    padding: 1rem;
+}
+ 
+h1, p {
+    color: var(--grayBlue);
+}
+
+h2 {
+    color: var(--darkBlue);
+}
+
+
+
+/*grabber*/
+.ai_pitch {
+    text-align: center;
+    margin: 3rem auto;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 500px;
+}
+    .ai_pitch h1 {
+        font-weight: 200;
+        font-size: 1.5rem;
+    }
+    .ai_pitch h2 {
+        font-size: 1.5rem;
+    }
+    .ai_pitch p {
+        margin-top: 1rem;
+    }
+    
+
+
+/*the cards*/
+.ai_tools {
+    width: 90%;
+    max-width: 1100px;
+    margin: 2rem auto;
+    display: grid;
+    gap: 2rem;
+}
+
+.ai_role {
+    background-color: var(--white);
+    box-shadow: 0 12px 18px hsla(213, 41%, 24%, 0.2);
+    border-top: 5px;
+    border-radius: .3rem;
+    padding: 1.7rem;
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+}
+    .ai_role img {
+        margin-top: 1rem;
+        align-self: flex-end;
+    }
+    .ai_role p {
+        font-size: .8rem;
+    }
+
+
+
+.supervisor {
+    border-top: solid var(--cyan);
+}
+
+.team-builder {
+    border-top: solid var(--red);
+}
+
+.karma {
+    border-top: solid var(--orange);
+}
+
+.calculator {
+    border-top: solid var(--blue);
+}
+
+
+
+
+
+@media (min-width: 1000px) {
+    .ai_tools {
+        gap: 2.5rem;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+            'supervisor builder calc'
+            'supervisor karma calc';
+    }  
+        .ai_pitch h1 {
+            font-size: 2.4rem;
+        }
+    
+    .ai_pitch h2 {
+        font-size: 2.4rem;
+    }
+    .supervisor {
+        grid-area: supervisor;
+        align-self: center;
+    }
+    .team-builder {
+        grid-area: builder;
+    }
+    .karma {
+        grid-area: karma;     
+    }
+    .calculator {
+        grid-area: calc;
+        align-self: center;
+    }
+   
+}
+
