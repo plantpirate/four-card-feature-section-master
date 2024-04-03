@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: []()
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/plantpirate/four-card-feature-section-master](https://github.com/plantpirate/four-card-feature-section-master)
+- Live Site URL: [https://plantpirate-four-card-feature-section.netlify.app/](https://plantpirate-four-card-feature-section.netlify.app/
 
 ## My process
 
